@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="resetsheet" href="css/reset.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="tab">
+    <ul class="tabMenu">
+      <li v-on:click="select('1')" v-bind:class="{activeMotion: active ==='1'}">タブ１</li>
+      <li v-on:click="select('2')" v-bind:class="{activeMotion: active ==='2'}">タブ２</li>
+      <li v-on:click="select('3')" v-bind:class="{activeMotion: active ==='3'}">タブ３</li>
+    </ul>
+    <div class="contents">
+      <div v-show="active === '1'">コンテンツ１</div>
+      <div v-show="active === '2'">コンテンツ２</div>
+      <div v-show="active === '3'">コンテンツ３</div>
+    </div>
+
+  </div>
+  <script>
+    const vm = new Vue({
+      el: '#tab',
+      data:{
+        active:'1'
+        },
+        methods:{
+          select: function(num){
+            this.active = num;
+          }
+        }
+    });
+  </script>
+</body>
+
+</html>

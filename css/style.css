@@ -1,0 +1,34 @@
+#tab {
+  
+  width: 100%;
+
+  margin: 20px auto;
+}
+
+.tabMenu {
+    display: flex;
+  
+
+}
+
+      li {
+      list-style: none;
+      width: auto;
+      padding: 10px 20px;
+      color: black;
+      font-size: 20px;
+      font-weight: bold;
+      border: 1px solid gray;
+      background-color:white;
+      cursor: pointer;
+      }
+
+        .contents {
+    width: 100%;
+    padding: 20px;
+        }
+    
+  .activeMotion{
+    color: white;
+    background-color: black;
+  }
